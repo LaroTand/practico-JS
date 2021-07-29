@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="style.css" />
+        <title>Porcentajes y descuentos</title>
+    </head>
+    <body>
+        <header>
+            <h1>Porcentajes y descuentos</h1>
+            <p>Segundo taller del curso practico de JS</p>
+        </header>
+
+        <main>
+            <section class="calc">
+                <h2>Calcula el precio a pagar de tus productos con descuento.</h2>
+
+                <form action="">
+                    <label for="InputPrice" class="form__input-container">
+                        <span>Escribe el precio de tu producto:</span>
+                        <input id="InputPrice" type="number" placeholder="precio" required/>
+                    </label>
+
+                    <label for="InputDiscount" class="form__input-container">
+                        <span>Escribe el descuento de tu producto:</span>
+                        <input id="InputDiscount" type="number" placeholder="descuento" required/>
+                    </label>
+
+                    <label for="InputCoupon" class="form__input-container">
+                        <span>Canjear cupón:</span>
+                        <input id="InputCoupon" type="text" placeholder="Escribe el código promocional" />
+                    </label>
+
+                    <label for="" class="form__buttons">
+                        <button type="button" onclick="onClickButtonDiscount()">Calcular el precio con descuento</button>
+                    </label>
+
+                    <p id="ResultP"></p>
+                </form>
+            </section>
+        </main>
+    </body>
+    <script src="./descuentos.js"></script>
+</html>
