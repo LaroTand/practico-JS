@@ -1,4 +1,3 @@
-
 // Cupones
 const coupons = [
     ["descuento", 50],
@@ -9,13 +8,12 @@ const coupons = [
 
 // Función para comprobar los cupones
 const checkCoupon = (code) => {
-
     for (let i of coupons) {
         if (code === i[0]) {
             // Cupón Aceptado
-            return(i[1])
+            return i[1]
         }
-    }    
+    }
     // Cupón Inexistente
     return 0
 }
@@ -28,7 +26,6 @@ const calcularPrecioConDescuento = (precio, descuento) => {
     return precioConDescuento
 }
 
-
 function onClickButtonDiscount() {
     const $inputPrice = document.getElementById("InputPrice")
     const priceValue = $inputPrice.value
@@ -38,17 +35,15 @@ function onClickButtonDiscount() {
 
     const precioConDescuento = calcularPrecioConDescuento(priceValue, discountValue).toFixed()
 
-
     const $inputCoupon = document.getElementById("InputCoupon")
     const codeCoupon = $inputCoupon.value
 
     console.log(codeCoupon)
-    
+
     // Comprobar cupon
     const discountCoupon = checkCoupon(codeCoupon)
 
     const precioConCupon = calcularPrecioConDescuento(precioConDescuento, discountCoupon).toFixed()
-
 
     const $resultP = document.getElementById("ResultP")
     $resultP.innerText = `El precio con descuento son: $${precioConCupon}`
